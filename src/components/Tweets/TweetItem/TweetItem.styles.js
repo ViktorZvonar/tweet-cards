@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import picture from '../../../images/picture.png';
+import picture2x from '../../../images/picture@2x.png';
 
 export const Card = styled.div`
   position: relative;
@@ -81,4 +82,9 @@ export const BackgroundFeature = styled.div`
   top: 28px;
   z-index: 999;
   background-image: url(${picture});
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(${picture2x});
+  }
 `;
