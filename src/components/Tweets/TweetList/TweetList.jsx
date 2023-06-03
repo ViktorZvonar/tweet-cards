@@ -12,9 +12,12 @@ const TweetList = () => {
 
   useEffect(() => {
     const fetchData = async () => {
-      const res = await getTweets(1);
-      console.log(res.data);
-      setTweets(res.data);
+      try {
+        const res = await getTweets(1);
+        setTweets(res.data);
+      } catch (error) {
+        console.log(error);
+      }
     };
     fetchData();
   }, []);

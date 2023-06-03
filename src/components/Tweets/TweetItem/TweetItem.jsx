@@ -12,17 +12,21 @@ import {
 
 import TweetButton from '../TweetButton/TweetButton';
 
+import { updateFollowers } from 'shared/services/TweetApi';
+
 const TweetItem = ({ tweet }) => {
   const [isFollowing, setIsFollowing] = useState(false);
-  const [followerCount, setFollowerCount] = useState(tweet.followers);
 
-  const handleFollowButtonClick = () => {
+  const handleFollowButtonClick = async () => {
+    setIsFollowing(!isFollowing);
+
     if (isFollowing) {
-      setFollowerCount(prevCount => prevCount - 1);
+      tweet.followers -= 1;
     } else {
-      setFollowerCount(prevCount => prevCount + 1);
+      tweet.followers += 1;
     }
-    setIsFollowing(prevFollowing => !prevFollowing);
+
+    await updateFollowers(tweet);
   };
 
   return (
@@ -33,22 +37,13 @@ const TweetItem = ({ tweet }) => {
       </AvatarContainer>
       <UserInfo>
         <p>{tweet.tweets} tweets</p>
-        <p>{numeral(followerCount).format('0,0')} followers</p>
+        <p>{numeral(tweet.followers).format('0,0')} followers</p>
       </UserInfo>
 
       <TweetButton
         isFollowing={isFollowing}
         onClick={handleFollowButtonClick}
       />
-
-      {/* <div className="tweets">
-        {user.tweets.map(tweet => (
-          <div key={tweet.id} className="tweet">
-            <p>{tweet.content}</p>
-            <p>{tweet.timestamp}</p>
-          </div>
-        ))}
-      </div> */}
     </Card>
   );
 };
