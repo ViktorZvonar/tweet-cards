@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import numeral from 'numeral';
 
 import {
   Card,
@@ -32,7 +33,7 @@ const TweetItem = ({ tweet }) => {
       </AvatarContainer>
       <UserInfo>
         <p>{tweet.tweets} tweets</p>
-        <p>{followerCount} followers</p>
+        <p>{numeral(followerCount).format('0,0')} followers</p>
       </UserInfo>
 
       <TweetButton
