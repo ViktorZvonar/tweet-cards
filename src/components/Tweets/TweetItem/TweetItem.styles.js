@@ -60,6 +60,7 @@ export const UserInfo = styled.div`
   bottom: 112px;
   left: 50%;
   transform: translateX(-50%);
+  width: 100%;
 
   display: flex;
   flex-direction: column;
