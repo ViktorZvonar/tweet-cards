@@ -1,16 +1,41 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+
+import PropTypes from 'prop-types';
+
+import { getTweets } from 'shared/services/TweetApi';
 
 import TweetItem from '../TweetItem/TweetItem';
-import userData from '../TweetItem/users.json';
-
 import { CollectionContainer } from './TweetList.styles';
 
-const TweetList = () => (
-  <CollectionContainer>
-    {userData.users.map(user => (
-      <TweetItem key={user.id} userId={user.id} />
-    ))}
-  </CollectionContainer>
-);
+const TweetList = () => {
+  const [tweets, setTweets] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const res = await getTweets(1);
+      console.log(res.data);
+      setTweets(res.data);
+    };
+    fetchData();
+  }, []);
+
+  return (
+    <CollectionContainer>
+      {tweets.map(tweet => (
+        <TweetItem key={tweet.id} tweet={tweet} />
+      ))}
+    </CollectionContainer>
+  );
+};
+
+TweetItem.propTypes = {
+  tweet: PropTypes.shape({
+    id: PropTypes.string,
+    user: PropTypes.string,
+    tweets: PropTypes.number,
+    followers: PropTypes.number,
+    avatar: PropTypes.string,
+  }).isRequired,
+};
 
 export default TweetList;

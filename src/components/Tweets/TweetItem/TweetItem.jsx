@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import userData from './users.json';
+
 import {
   Card,
   AvatarContainer,
@@ -11,12 +11,9 @@ import {
 
 import TweetButton from '../TweetButton/TweetButton';
 
-const TweetItem = ({ userId }) => {
-  const user = userData.users.find(user => user.id === userId);
-  const avatarUrl = `https://placekitten.com/200/200`;
-
+const TweetItem = ({ tweet }) => {
   const [isFollowing, setIsFollowing] = useState(false);
-  const [followerCount, setFollowerCount] = useState(user.followersCount);
+  const [followerCount, setFollowerCount] = useState(tweet.followers);
 
   const handleFollowButtonClick = () => {
     if (isFollowing) {
@@ -29,13 +26,13 @@ const TweetItem = ({ userId }) => {
 
   return (
     <Card>
-      <BackgroundFeature></BackgroundFeature>
+      <BackgroundFeature />
       <AvatarContainer>
-        <Avatar src={avatarUrl} alt={`${user.username}'s avatar`} />
+        <Avatar src={tweet.avatar} alt={`${tweet.user}'s avatar`} />
       </AvatarContainer>
       <UserInfo>
-        <p>{user.tweetsCount} tweets</p>
-        <p>{user.followersCount} followers</p>
+        <p>{tweet.tweets} tweets</p>
+        <p>{followerCount} followers</p>
       </UserInfo>
 
       <TweetButton
@@ -56,7 +53,13 @@ const TweetItem = ({ userId }) => {
 };
 
 TweetItem.propTypes = {
-  userId: PropTypes.number.isRequired,
+  tweet: PropTypes.shape({
+    id: PropTypes.string,
+    user: PropTypes.string,
+    tweets: PropTypes.number,
+    followers: PropTypes.number,
+    avatar: PropTypes.string,
+  }).isRequired,
 };
 
 export default TweetItem;
