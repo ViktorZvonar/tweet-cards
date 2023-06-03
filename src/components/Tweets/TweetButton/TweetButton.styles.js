@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Button = styled.button`
+export const FollowButton = styled.button`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -11,8 +11,10 @@ export const Button = styled.button`
   position: absolute;
   width: 196px;
   height: 50px;
-  left: 92px;
   top: 374px;
+
+  transform: translateX(-50%);
+  left: 50%;
 
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
@@ -22,5 +24,19 @@ export const Button = styled.button`
   line-height: 1.2;
   text-transform: uppercase;
   color: #373737;
-  background: ${props => (props.isActive ? '#5cd3a8' : '#ebd8ff')};
+  background: ${props => (props.isFollowing ? '#5cd3a8' : '#ebd8ff')};
+
+  &:hover {
+    background: ${props => (props.isFollowing ? '#4dbf96' : '#d4c1e7')};
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+`;
+
+export const LoadMoreButton = styled(FollowButton)`
+  top: 500px;
 `;

@@ -15,7 +15,7 @@ import TweetButton from '../TweetButton/TweetButton';
 import { updateFollowers } from 'shared/services/TweetApi';
 
 const TweetItem = ({ tweet }) => {
-  const [isFollowing, setIsFollowing] = useState(false);
+  const [isFollowing, setIsFollowing] = useState(tweet.isFollowing);
 
   const handleFollowButtonClick = async () => {
     setIsFollowing(!isFollowing);
@@ -26,7 +26,11 @@ const TweetItem = ({ tweet }) => {
       tweet.followers += 1;
     }
 
-    await updateFollowers(tweet);
+    try {
+      await updateFollowers(tweet);
+    } catch (error) {
+      console.log('Error updating followers:', error);
+    }
   };
 
   return (
@@ -41,9 +45,12 @@ const TweetItem = ({ tweet }) => {
       </UserInfo>
 
       <TweetButton
+        buttonType="follow"
         isFollowing={isFollowing}
         onClick={handleFollowButtonClick}
-      />
+      >
+        {isFollowing ? 'Following' : 'Follow'}
+      </TweetButton>
     </Card>
   );
 };

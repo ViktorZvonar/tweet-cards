@@ -27,6 +27,7 @@ export const updateFollowers = async tweet => {
     const updatedTweet = {
       ...tweet,
       followers: tweet.followers,
+      isFollowing: !tweet.isFollowing,
     };
     const res = await instance.put(`/${tweet.id}`, updatedTweet);
     return res;
