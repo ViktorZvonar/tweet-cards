@@ -57,7 +57,6 @@ const TweetItem = ({ tweet }) => {
 
 TweetItem.propTypes = {
   tweet: PropTypes.shape({
-    id: PropTypes.string,
     user: PropTypes.string,
     tweets: PropTypes.number,
     followers: PropTypes.number,

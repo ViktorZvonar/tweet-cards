@@ -11,7 +11,7 @@ export const FollowButton = styled.button`
   position: absolute;
   width: 196px;
   height: 50px;
-  top: 374px;
+  bottom: 36px;
 
   transform: translateX(-50%);
   left: 50%;
@@ -38,5 +38,5 @@ export const FollowButton = styled.button`
 `;
 
 export const LoadMoreButton = styled(FollowButton)`
-  top: 500px;
+  bottom: -100px;
 `;

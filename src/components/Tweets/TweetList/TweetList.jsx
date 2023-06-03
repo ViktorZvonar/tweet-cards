@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 
 import PropTypes from 'prop-types';
 
+import { nanoid } from 'nanoid';
+
 import { getTweets } from 'shared/services/TweetApi';
 
 import TweetItem from '../TweetItem/TweetItem';
@@ -17,22 +19,30 @@ const TweetList = () => {
     const fetchData = async () => {
       try {
         const res = await getTweets(page);
-        setTweets(res.data);
+        if (res.data.length === 0) {
+          alert('No more users with tweets');
+          return;
+        }
+        if (page === 1) {
+          setTweets(res.data);
+        } else {
+          setTweets(prevTweets => [...prevTweets, ...res.data]);
+        }
       } catch (error) {
-        console.log(error);
+        console.log(error.message);
       }
     };
     fetchData();
   }, [page]);
 
   const handleLoadMore = () => {
-    setPage(page + 1);
+    setPage(prevPage => prevPage + 1);
   };
 
   return (
     <CollectionContainer>
       {tweets.map(tweet => (
-        <TweetItem key={tweet.id} tweet={tweet} />
+        <TweetItem key={nanoid()} tweet={tweet} />
       ))}
       <TweetButton buttonType="loadMore" onClick={handleLoadMore}>
         Load More
@@ -41,14 +51,13 @@ const TweetList = () => {
   );
 };
 
-TweetItem.propTypes = {
+TweetList.propTypes = {
   tweet: PropTypes.shape({
-    id: PropTypes.string,
-    user: PropTypes.string,
-    tweets: PropTypes.number,
-    followers: PropTypes.number,
-    avatar: PropTypes.string,
-  }).isRequired,
+    user: PropTypes.string.isRequired,
+    tweets: PropTypes.number.isRequired,
+    followers: PropTypes.number.isRequired,
+    avatar: PropTypes.string.isRequired,
+  }),
 };
 
 export default TweetList;

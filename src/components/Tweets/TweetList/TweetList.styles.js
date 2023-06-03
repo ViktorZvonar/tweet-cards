@@ -2,9 +2,9 @@ import styled from 'styled-components';
 
 export const CollectionContainer = styled.div`
   position: relative;
-  flex-wrap: wrap;
-  gap: 48px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
   margin-top: 24px;
-  justify-content: space-around;
+  justify-items: center;
 `;
