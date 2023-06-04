@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from 'react';
-
 import PropTypes from 'prop-types';
-
 import { nanoid } from 'nanoid';
 
 import { getTweets } from 'shared/services/TweetApi';
 
 import TweetItem from '../TweetItem/TweetItem';
-
 import TweetButton from '../TweetButton/TweetButton';
 import { CollectionContainer } from './TweetList.styles';
 

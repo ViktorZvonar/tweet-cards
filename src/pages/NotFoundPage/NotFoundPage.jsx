@@ -1,13 +1,16 @@
 import React from 'react';
 import Wrapper from 'shared/Wrapper/Wrapper';
 
-import { Link, Title } from './NotFoundPage.styles';
+import { Title } from './NotFoundPage.styles';
+import LinkComponent from './../../shared/LinkComponent/LinkComponent';
 
 const NotFoundPage = () => {
   return (
     <Wrapper>
-      <Title>No such page</Title>
-      <Link to="/">To home page</Link>
+      <Title>Page not found</Title>
+      <LinkComponent linkType="link" to="/">
+        To home page
+      </LinkComponent>
     </Wrapper>
   );
 };

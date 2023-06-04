@@ -6,7 +6,7 @@ export const Link = styled(NavLink)`
   justify-content: center;
   align-items: center;
   padding: 14px 28px;
-  width: 196px;
+  width: 220px;
   height: 50px;
 
   position: absolute;
@@ -15,6 +15,7 @@ export const Link = styled(NavLink)`
   top: 50%;
 
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
+  border: 1px solid black;
   border-radius: 10.3108px;
 
   font-weight: 600;
@@ -33,4 +34,10 @@ export const Link = styled(NavLink)`
   }
 `;
 
-export const HomeBackground = styled.div``;
+export const Back = styled(Link)`
+  position: fixed;
+  width: 96px;
+  height: 50px;
+  left: 70px;
+  top: 50px;
+`;

@@ -1,12 +1,13 @@
 import React from 'react';
 import Wrapper from 'shared/Wrapper/Wrapper';
-
-import { Link } from './HomePage.styles';
+import LinkComponent from './../../shared/LinkComponent/LinkComponent';
 
 const HomePage = () => {
   return (
     <Wrapper>
-      <Link to="/tweets">Go to Tweets</Link>
+      <LinkComponent linkType="link" to="/tweet-cards">
+        Go to Tweets
+      </LinkComponent>
     </Wrapper>
   );
 };

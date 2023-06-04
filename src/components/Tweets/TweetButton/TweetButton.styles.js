@@ -31,5 +31,8 @@ export const FollowButton = styled.button`
 `;
 
 export const LoadMoreButton = styled(FollowButton)`
-  margin: 0 auto 26px auto;
+  position: sticky;
+  transform: translateX(-50%);
+  left: 50%;
+  margin: 0 0 26px 0;
 `;
