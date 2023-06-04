@@ -1,10 +1,10 @@
 {
   "files": {
     "main.css": "/tweet-cards/static/css/main.d2acb4b0.css",
-    "main.js": "/tweet-cards/static/js/main.79ed1bf1.js",
-    "static/js/909.581f1c11.chunk.js": "/tweet-cards/static/js/909.581f1c11.chunk.js",
+    "main.js": "/tweet-cards/static/js/main.2f5baff5.js",
+    "static/js/909.c0dcea7d.chunk.js": "/tweet-cards/static/js/909.c0dcea7d.chunk.js",
     "static/js/74.a3366bf8.chunk.js": "/tweet-cards/static/js/74.a3366bf8.chunk.js",
-    "static/js/424.5eda0699.chunk.js": "/tweet-cards/static/js/424.5eda0699.chunk.js",
+    "static/js/424.2f2eaa7e.chunk.js": "/tweet-cards/static/js/424.2f2eaa7e.chunk.js",
     "static/js/881.9f465e39.chunk.js": "/tweet-cards/static/js/881.9f465e39.chunk.js",
     "static/js/914.8d34cfdd.chunk.js": "/tweet-cards/static/js/914.8d34cfdd.chunk.js",
     "static/media/Twitter.jpg": "/tweet-cards/static/media/Twitter.d74407ab7a85811364d7.jpg",
@@ -12,15 +12,15 @@
     "static/media/picture.png": "/tweet-cards/static/media/picture.032662a2a907475127d7.png",
     "index.html": "/tweet-cards/index.html",
     "main.d2acb4b0.css.map": "/tweet-cards/static/css/main.d2acb4b0.css.map",
-    "main.79ed1bf1.js.map": "/tweet-cards/static/js/main.79ed1bf1.js.map",
-    "909.581f1c11.chunk.js.map": "/tweet-cards/static/js/909.581f1c11.chunk.js.map",
+    "main.2f5baff5.js.map": "/tweet-cards/static/js/main.2f5baff5.js.map",
+    "909.c0dcea7d.chunk.js.map": "/tweet-cards/static/js/909.c0dcea7d.chunk.js.map",
     "74.a3366bf8.chunk.js.map": "/tweet-cards/static/js/74.a3366bf8.chunk.js.map",
-    "424.5eda0699.chunk.js.map": "/tweet-cards/static/js/424.5eda0699.chunk.js.map",
+    "424.2f2eaa7e.chunk.js.map": "/tweet-cards/static/js/424.2f2eaa7e.chunk.js.map",
     "881.9f465e39.chunk.js.map": "/tweet-cards/static/js/881.9f465e39.chunk.js.map",
     "914.8d34cfdd.chunk.js.map": "/tweet-cards/static/js/914.8d34cfdd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.d2acb4b0.css",
-    "static/js/main.79ed1bf1.js"
+    "static/js/main.2f5baff5.js"
   ]
 }
