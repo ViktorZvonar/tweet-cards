@@ -6,7 +6,4 @@ export const CollectionContainer = styled.div`
   gap: 48px;
   margin-top: 24px;
   justify-items: center;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
 `;

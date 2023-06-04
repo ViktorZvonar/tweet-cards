@@ -8,9 +8,7 @@ export const FollowButton = styled.button`
   width: 196px;
   height: 50px;
 
-  margin-top: 26px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 26px auto auto auto;
 
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;
@@ -34,9 +32,5 @@ export const FollowButton = styled.button`
 `;
 
 export const LoadMoreButton = styled(FollowButton)`
-  margin-bottom: 26px;
-  margin-top: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+  margin: 0 auto 26px auto;
 `;
