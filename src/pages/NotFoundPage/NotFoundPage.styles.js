@@ -6,9 +6,9 @@ export const Title = styled.h1`
   justify-content: center;
   align-items: center;
   margin: 50px auto auto auto;
-  width: 520px;
+  width: 720px;
   height: 120px;
-  font-size: 100px;
+  font-size: 90px;
   background-color: lightblue;
   font-weight: bold;
   border-radius: 10.3108px;

@@ -1,11 +1,14 @@
-import { Link } from 'react-router-dom';
+import React from 'react';
+import Wrapper from 'shared/Wrapper/Wrapper';
+
+import { Link, Title } from './NotFoundPage.styles';
 
 const NotFoundPage = () => {
   return (
-    <div>
-      <h2>Page not found</h2>
+    <Wrapper>
+      <Title>Not found</Title>
       <Link to="/">To home page</Link>
-    </div>
+    </Wrapper>
   );
 };
 

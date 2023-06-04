@@ -1,11 +1,13 @@
 import React from 'react';
-
 import Wrapper from 'shared/Wrapper/Wrapper';
+
+import { Link, Title } from './HomePage.styles';
 
 const HomePage = () => {
   return (
     <Wrapper>
-      <h1>Welcome</h1>
+      <Title>Welcome</Title>
+      <Link to="/tweets">Go to Tweets</Link>
     </Wrapper>
   );
 };
