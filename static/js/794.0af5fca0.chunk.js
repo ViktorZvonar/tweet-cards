@@ -1,2 +1,0 @@
-"use strict";(self.webpackChunktweed_cards=self.webpackChunktweed_cards||[]).push([[794],{794:function(e,n,r){r.r(n);var s=r(87),c=r(184);n.default=function(){return(0,c.jsxs)("div",{children:[(0,c.jsx)("h2",{children:"Page not found"}),(0,c.jsx)(s.rU,{to:"/",children:"To home page"})]})}}}]);
-//# sourceMappingURL=794.0af5fca0.chunk.js.map
