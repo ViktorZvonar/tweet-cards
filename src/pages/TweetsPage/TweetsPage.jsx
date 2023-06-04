@@ -7,7 +7,7 @@ import LinkComponent from 'shared/LinkComponent/LinkComponent';
 const TweetPage = () => {
   return (
     <Wrapper>
-      <LinkComponent to="/tweet-cards">Back</LinkComponent>
+      <LinkComponent to="/">Back</LinkComponent>
       <TweetList />
     </Wrapper>
   );
