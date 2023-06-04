@@ -7,6 +7,7 @@ export const Card = styled.div`
   position: relative;
   width: 380px;
   height: 460px;
+  padding: 28px 36px 36px;
 
   background: linear-gradient(
     114.99deg,
@@ -55,11 +56,16 @@ export const Avatar = styled.img`
   object-fit: cover;
 `;
 
+export const Logo = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+`;
+
 export const UserInfo = styled.div`
-  position: absolute;
-  bottom: 112px;
-  left: 50%;
-  transform: translateX(-50%);
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 88px;
   width: 100%;
 
   display: flex;
@@ -75,8 +81,17 @@ export const UserInfo = styled.div`
   color: #ebd8ff;
 `;
 
-export const BackgroundFeature = styled.div`
+export const LogoContainer = styled.div`
   position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 76px;
+  height: 22px;
+`;
+
+export const BackgroundFeature = styled.div`
+  margin-left: auto;
+  margin-right: auto;
   width: 308px;
   height: 168px;
   left: 36px;

@@ -8,11 +8,16 @@ import {
   Avatar,
   UserInfo,
   BackgroundFeature,
+  LogoContainer,
+  Logo,
 } from './TweetItem.styles';
 
 import TweetButton from '../TweetButton/TweetButton';
 
 import { updateFollowers } from 'shared/services/TweetApi';
+
+import logoImage from '../../../images/Logo.png';
+import logoImage2x from '../../../images/Logo@2x.png';
 
 const TweetItem = ({ tweet }) => {
   const [isFollowing, setIsFollowing] = useState(tweet.isFollowing);
@@ -35,6 +40,14 @@ const TweetItem = ({ tweet }) => {
 
   return (
     <Card>
+      <LogoContainer>
+        <Logo
+          src={logoImage}
+          srcSet={`${logoImage} 1x, ${logoImage2x} 2x`}
+          alt="Logo"
+        />
+      </LogoContainer>
+
       <BackgroundFeature />
       <AvatarContainer>
         <Avatar src={tweet.avatar} alt={`${tweet.user}'s avatar`} />
