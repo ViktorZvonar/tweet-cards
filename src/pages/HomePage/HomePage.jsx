@@ -5,7 +5,7 @@ import LinkComponent from './../../shared/LinkComponent/LinkComponent';
 const HomePage = () => {
   return (
     <Wrapper>
-      <LinkComponent linkType="link" to="/tweet-cards">
+      <LinkComponent linkType="link" to="/tweets">
         Go to Tweets
       </LinkComponent>
     </Wrapper>

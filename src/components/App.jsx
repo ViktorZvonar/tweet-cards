@@ -30,8 +30,8 @@ export const App = () => {
         }
       >
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/tweet-cards" element={<TweetPage />} />
+          <Route path="/tweet-cards" element={<HomePage />} />
+          <Route path="/tweets" element={<TweetPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </Suspense>

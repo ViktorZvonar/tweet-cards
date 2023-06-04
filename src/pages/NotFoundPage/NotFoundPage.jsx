@@ -8,7 +8,7 @@ const NotFoundPage = () => {
   return (
     <Wrapper>
       <Title>Page not found</Title>
-      <LinkComponent linkType="link" to="/">
+      <LinkComponent linkType="link" to="/tweet-cards">
         To home page
       </LinkComponent>
     </Wrapper>
