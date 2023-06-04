@@ -9,7 +9,7 @@ export const Title = styled.h1`
   width: 720px;
   height: 120px;
   font-size: 90px;
-  background-color: lightblue;
+  background-color: #ebd8ff;
   font-weight: bold;
   border-radius: 10.3108px;
 `;
@@ -22,7 +22,10 @@ export const Link = styled(NavLink)`
   width: 196px;
   height: 50px;
 
-  margin: 200px auto auto auto;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
 
   box-shadow: 0px 3.43693px 3.43693px rgba(0, 0, 0, 0.25);
   border-radius: 10.3108px;

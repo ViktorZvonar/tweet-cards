@@ -6,7 +6,7 @@ import { Link, Title } from './NotFoundPage.styles';
 const NotFoundPage = () => {
   return (
     <Wrapper>
-      <Title>Not found</Title>
+      <Title>No such page</Title>
       <Link to="/">To home page</Link>
     </Wrapper>
   );
