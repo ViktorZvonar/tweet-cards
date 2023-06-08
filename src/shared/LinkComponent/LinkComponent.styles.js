@@ -36,6 +36,7 @@ export const Link = styled(NavLink)`
 
 export const Back = styled(Link)`
   position: fixed;
+  z-index: 3;
   width: 96px;
   height: 50px;
   left: 70px;
